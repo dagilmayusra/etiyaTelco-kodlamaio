@@ -1,0 +1,71 @@
+<etiya-dashboard-layout>
+    
+            <!-- <div class="card p-4" style=" background-color: #242441; ">
+                <div class="d-flex text-center mb-5" style="color: white;">
+                    <div class="">
+                        <h3>Giriş Yap</h3>
+                    </div>
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div>
+                        <div class="col-12 md:col-4">
+                            <div class="p-inputgroup">
+                                <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                                <input type="text" pInputText placeholder="Username">         
+                            </div><br>
+                            <div class="p-inputgroup">
+                                <span class="p-inputgroup-addon"><i class="pi pi-eye"></i></span>
+                                <input type="password" pInputText placeholder="Password">         
+                            </div>
+                        </div><br>
+        
+                        <button style="background-color: #fca016; color: white;" pButton pRipple type="submit" label="Giriş Yap" icon="pi pi-sign-in" class="w-full p-button-outlined"> </button>
+                    </div>
+                </form> 
+            </div> -->
+
+            <div class="container">
+                <div class="surface-card p-4 shadow-2 border-round w-full lg:w-6">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <!-- util class -->
+                    <form [formGroup]="loginForm">
+                      <div class="mb-3">
+                        <label for="email1" class="block text-900 font-medium mb-2"
+                          >Username</label
+                        >
+                        <input
+                          formControlName="userName"
+                          id="email1"
+                          type="text"
+                          pInputText
+                          class="w-full mb-3 d-block"
+                        />
+                      </div>
+              
+                      <div>
+                        <label for="password1" class="block text-900 font-medium mb-2"
+                          >Password</label
+                        >
+                        <input
+                          formControlName="password"
+                          id="password1"
+                          type="password"
+                          pInputText
+                          class="w-full mb-3 d-block"
+                        />
+                      </div>
+              
+                      <button
+                        (click)="login()"
+                        pButton
+                        pRipple
+                        label="Sign In"
+                        icon="pi pi-user"
+                        class="w-full d-block"
+                      ></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+</etiya-dashboard-layout>

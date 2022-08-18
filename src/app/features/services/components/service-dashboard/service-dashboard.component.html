@@ -1,0 +1,56 @@
+<etiya-dashboard-layout>
+    <div class="row">
+        <ng-container [ngSwitch]="fetchStatus">
+            <div *ngSwitchCase="'loaded'" >
+                <p-toolbar styleClass="p-mb-4">
+                    <ng-template pTemplate="left" >
+                        <h1 style="margin-right: 35px;">Servis Listesi</h1>
+                        <button pButton pRipple label="Ekle" icon="pi pi-plus" class="p-button-success p-mr-2" style="background-color: #242441;color: green;" 
+                            routerLink="/service/add"></button>
+                    </ng-template>
+                </p-toolbar>
+                <p-table [value]="services" [paginator]="true" [rows]="3" [showCurrentPageReport]="true" styleClass="p-datatable-gridlines">
+                    <ng-template pTemplate="header"> 
+                        <tr>
+                            <th>Id</th>
+                            <th>Servis Adı</th>
+                            <th>Güncelle</th>
+                            <th>Sil</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-service>
+                        <tr>
+                            <td>{{service.id}}</td>
+                            <td>{{service.name}}</td>
+                            <td><button style="margin-right: 20px; background-color: #242441; color: green;" pButton pRipple icon="pi pi-pencil" 
+                                (click)="selectedServiceId(service)"
+                                class="p-button-rounded p-button-help p-mr-2"></button>
+                            </td>
+                            <td>
+                                <button pButton pRipple icon="pi pi-trash" zty (click)="deleteService(service.id)" style="color: #fca016; background-color: #242441;"
+                                    class="p-button-rounded p-button-warning"></button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="summary">
+                        <div class="p-d-flex p-ai-center p-jc-between">
+                           Toplam {{services ? services.length : 0 }} servis var.
+                        </div>
+                    </ng-template>
+                </p-table>
+            </div>
+            <ng-container *ngSwitchCase="'pending'">
+                <div class="col-7 mb-3 mt-4" *ngFor="let i of skeletonSize | createFakeArray">
+                    <etiya-list-skeleton></etiya-list-skeleton>
+                </div>
+            </ng-container>
+            <!-- <ng-container *ngSwitchCase="'error'">
+                <div class="col-12">
+                    <div class="alert alert-danger" role="alert">
+                        Enabled to fetch
+                    </div>
+                </div>
+            </ng-container> -->
+        </ng-container>
+    </div>
+</etiya-dashboard-layout>

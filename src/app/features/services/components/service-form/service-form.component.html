@@ -1,0 +1,18 @@
+<etiya-dashboard-layout>
+  <div class="container w-75" *ngIf="serviceForm">
+    <form [formGroup]="serviceForm" (ngSubmit)="save()" >
+      <div class="form-group m-3">
+        <label for="name" class="block"><h4>Servis Adı</h4></label>
+        <input id="name" formControlName="name" type="text" aria-describedby="username-help" class="form-control" pInputText />       
+      </div>     
+      <button pButton label="Kaydet" type="submit" class="p-button-success m-3" icon="pi pi-check" iconPos="left" style="background-color: #242441; color: green;"></button>
+      </form>
+  </div>
+</etiya-dashboard-layout>
+
+
+
+
+
+
+

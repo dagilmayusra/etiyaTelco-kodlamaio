@@ -1,0 +1,48 @@
+<nav class="navbar navbar-dark navbar-expand-lg" style="background-color:#242441; height: 80px;">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex" style="margin-left: 105px;">
+        <img src="https://www.etiya.com/files/logo.svg" alt="Etiya" width="165" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="" routerLinkActive="active" >Anasayfa</a>
+          </li>
+          <li class="nav-item dropdown"> 
+            <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Servisler
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/services" routerLinkActive="" >Tüm Servisler</a></li>
+              <li><a class="dropdown-item" routerLink="/service/add" routerLinkActive="active" >Servis Ekle</a></li>
+            </ul>
+          </li>          
+        </ul>
+        <li class="nav-item" style="list-style-type:none; color: white; margin-right: 35px;">
+          <a class="nav-link active" aria-current="page" routerLink="/login" routerLinkActive="active">Giriş </a>
+        </li>
+        
+        
+        <li class="nav-item dropdown" style="list-style-type:none; color: white; margin-right: 105px;">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">TR</a>
+          <ul class="dropdown-menu" style="width: 15px;">
+            <li><a class="dropdown-item" >TR</a></li>
+            <li><a class="dropdown-item" >EN</a></li>
+          </ul>
+        </li>
+      </div>
+       
+    </div>
+  </nav>
+
+  <!-- <div class="lang-toggle">
+    <div>
+      <a href="https:www.etiya.com/tr/lang/tr" style="color: white;">TR</a>
+    </div>
+    <div class="active" data-lang="en">
+      <a href="https://www.etiya.com/tr/lang/en" style="color:white;">EN</a>
+    </div>
+  </div> -->
